@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-app="CadastroApp" ng-controller="UsuarioController">
+    <h2>Lista de Usuários</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Endereço</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in usuarios">
+                <td>{{ user.id }}</td>
+                <td>{{ user.nome }}</td>
+                <td>{{ user.cpf }}</td>
+                <td>{{ user.endereco }}</td>
+                <td>{{ user.telefone }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

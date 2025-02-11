@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" ng-app="CadastroApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>-->
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/app.js"></script>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #343a40;
+            color: white;
+            padding: 15px;
+        }
+        
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+
+        .sidebar a:hover {
+            background: #495057;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .message-box {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .message-success {
+            background: #d4edda;
+            color: #155724;
+            display: block;
+        }
+
+        .message-error {
+            background: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+    </style>
+</head>
+<body ng-controller="UsuarioController">
+    <h2>Cadastro de Usuário</h2>
+
+    <!-- Formulário de Cadastro -->
+    <div>
+        <div class="mb-3">
+            <label class="form-label">Nome:</label>
+            <input type="text" class="form-control" ng-model="usuario.nome" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">CPF:</label>
+            <input type="text" class="form-control" ng-model="usuario.cpf" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Endereço:</label>
+            <input type="text" class="form-control" ng-model="usuario.endereco">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Telefone:</label>
+            <input type="text" class="form-control" ng-model="usuario.telefone">
+        </div>
+        <button class="btn btn-primary" ng-click="salvarUsuario()">Salvar</button>
+    </div>
+
+    <br />
+    <hr />
+    <div class="mb-3">
+        <label class="form-label">Mensagem: </label>
+        <p>{{ mensagem }}</p>
+    </div>
+</body>
+</html>
