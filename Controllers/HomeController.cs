@@ -12,8 +12,8 @@ namespace web_app_sistemainfo.Controllers
         // Para testar ListarUsuarios.cshtml
         private static List<Usuario> usuarios = new List<Usuario>()
         {
-            new Usuario { id = 888, nome = "Teste 888", cpf = "888.888.888-88", endereco = "Rua 888", telefone = "(88) 88888-8888" },
-            new Usuario { id = 999, nome = "Teste 999", cpf = "999.999.999-99", endereco = "Rua 999", telefone = "(99) 99999-9999" }
+            new Usuario { Id = 888, Nome = "Teste 888", Cpf = "888.888.888-88", Endereco = "Rua 888", Telefone = "(88) 88888-8888" },
+            new Usuario { Id = 999, Nome = "Teste 999", Cpf = "999.999.999-99", Endereco = "Rua 999", Telefone = "(99) 99999-9999" }
         };
 
         public ActionResult ListarUsuarios()

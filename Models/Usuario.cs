@@ -8,15 +8,15 @@ namespace web_app_sistemainfo.Models
 {
     public class Usuario
     {
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "Nome é obrigatório.")]
-        public string nome { get; set; }
+        public string Nome { get; set; }
 
         [Required(ErrorMessage = "CPF é obrigatório.")]
-        public string cpf { get; set; }
+        public string Cpf { get; set; }
 
-        public string endereco { get; set; }
-        public string telefone { get; set; }
+        public string Endereco { get; set; }
+        public string Telefone { get; set; }
     }
 }
