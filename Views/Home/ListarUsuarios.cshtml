@@ -26,3 +26,29 @@
         </tbody>
     </table>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+
+<script>
+    var app = angular.module("CadastroApp", []);
+
+    app.controller("UsuarioController", function ($scope, $http) {
+        $scope.usuarios = []; // Inicializa como array vazio
+
+        console.log("Iniciando o controlador de usuários...");
+
+        $scope.carregarUsuarios = function () {
+            console.log("Chamando GET /Home/GetUsuarios...");
+            $http.get("/Home/GetUsuarios")
+                .then(function (response) {
+                    console.log("Resposta recebida:", response.data);
+                    $scope.usuarios = response.data;
+                })
+                .catch(function (error) {
+                    console.error("Erro ao carregar usuários:", error);
+                });
+        };
+
+        $scope.carregarUsuarios();
+    });
+</script>

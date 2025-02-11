@@ -18,6 +18,9 @@ namespace web_app_sistemainfo.Controllers
 
         public ActionResult ListarUsuarios()
         {
+            if (Session["User"] == null)
+                return RedirectToAction("Login");
+
             return View();
         }
 
